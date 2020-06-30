@@ -5,17 +5,17 @@ namespace Greenchoice\Api;
 
 class Readings extends AbstractApi
 {
-    public function getCounter($id)
+    public function getCounters(int $contractId)
     {
         return $this->get('/api/v2/meterstanden/gettelwerken', [
-            'overeenkomstId' => $id
+            'overeenkomstId' => $contractId
         ]);
     }
 
-    public function getData($id)
+    public function getCounterData(int $contractId)
     {
         return $this->get('/api/v2/meterstanden/getstanden', [
-            'overeenkomstId' => $id
+            'overeenkomstId' => $contractId
         ]);
     }
 }

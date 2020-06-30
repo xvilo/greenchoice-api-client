@@ -8,10 +8,10 @@ use function GuzzleHttp\Psr7\build_query;
 
 class Features extends AbstractApi
 {
-    public function getByWarrantId($id)
+    public function getByContractId(int $contractId)
     {
         return $this->get('/api/v1/features/beschikbaar', [
-            'overeenkomstId' => $id
+            'overeenkomstId' => $contractId
         ]);
     }
 }

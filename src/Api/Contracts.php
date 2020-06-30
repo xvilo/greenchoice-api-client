@@ -8,10 +8,10 @@ use function GuzzleHttp\Psr7\build_query;
 
 class Contracts extends AbstractApi
 {
-    public function getApproved($id)
+    public function getApproved(int $contractId)
     {
         return $this->get('/api/v2/machtigingen/geaccordeerd', [
-            'overeenkomstId' => $id
+            'overeenkomstId' => $contractId
         ]);
     }
 }
