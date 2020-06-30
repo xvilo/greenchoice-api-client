@@ -36,7 +36,7 @@ class Client
 
     public Api\Customer $customer;
 
-    public Api\Warrants $warrants;
+    public Api\Contracts $warrants;
     /**
      * @var Features
      */
@@ -57,7 +57,7 @@ class Client
 
         $this->authentication = new Api\Authentication($this);
         $this->customer = new Api\Customer($this);
-        $this->warrants = new Api\Warrants($this);
+        $this->warrants = new Api\Contracts($this);
         $this->features = new Features($this);
         $this->readings = new Api\Readings($this);
 

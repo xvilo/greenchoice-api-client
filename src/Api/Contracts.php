@@ -6,7 +6,7 @@ namespace Greenchoice\Api;
 use Greenchoice\HttpClient\Plugin\Authentication\GrantType;
 use function GuzzleHttp\Psr7\build_query;
 
-class Warrants extends AbstractApi
+class Contracts extends AbstractApi
 {
     public function getApproved($id)
     {
