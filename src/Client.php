@@ -103,11 +103,11 @@ class Client
      * Authenticate a user for all next requests.
      *
      * @param string $accessToken
-     * @param string $accessTokenSso
+     * @param string|null $accessTokenSso
      */
     public function authenticate(
         string $accessToken,
-        string $accessTokenSso
+        ?string $accessTokenSso = null
     ) {
         $this->getHttpClientBuilder()->removePlugin(Authentication::class);
         $this->getHttpClientBuilder()->addPlugin(new Authentication($accessToken, $accessTokenSso));

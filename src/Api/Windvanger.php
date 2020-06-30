@@ -10,14 +10,14 @@ class Windvanger extends AbstractApi
 {
     /**
      * @param $contractId int
-     * @param $id2 string At this point in time, it's unknown what ID this is.
+     * @param $customerId int
      * @param DateTimeInterface $date
      * @return array|string
      */
-    public function getGenerated(int $contractId, string $id2, DateTimeInterface $date)
+    public function getGenerated(int $contractId, int $customerId, DateTimeInterface $date)
     {
         $formattedDate = $date->format(Client::DATE_FORMAT);
-
-        return $this->get(sprintf("/api/windvanger/opwek/%s/%s/PerDag/%s", $id2, $contractId, $formattedDate));
+        die(var_dump(sprintf("/api/windvanger/opwek/%s/%s/PerDag/%s", $customerId, $contractId, $formattedDate)));
+        return $this->get(sprintf("/api/windvanger/opwek/%s/%s/PerDag/%s", $customerId, $contractId, $formattedDate));
     }
 }
