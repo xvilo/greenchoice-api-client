@@ -22,7 +22,7 @@ require_once 'vendor/autoload.php';
 
 $client = new Greenchoice\Client();
 $clientTokenSso = $client->authentication->requestTokenSso(
-    'xxxxxx',
+    'app-mobileapi',
     'xxxxx-xxx-xxx-xxxx-xxxxxxxxxx',
     'xxxxx-xxx-xxx-xxxx-xxxxxxxxxx',
     'openid offline_access',
@@ -32,8 +32,8 @@ $clientTokenSso = $client->authentication->requestTokenSso(
 );
 
 $clientToken = $client->authentication->requestToken(
-    'xxxxx',
-    'xxxxxxxxxxxxxxxx',
+    'MobileApp',
+    'A6E60EBF73521F57',
     'xxxxx-xxx-xxx-xxxx-xxxxxxxxxx',
     new Password(),
     'you@example.com',
