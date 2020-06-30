@@ -49,7 +49,12 @@ class Client
     /**
      * @var Api\Windvanger
      */
-    private Api\Windvanger $public;
+    public Api\Windvanger $windvanger;
+
+    /**
+     * @var Api\Usages
+     */
+    public Api\Usages $usages;
 
     /**
      * @param Builder|null $httpClientBuilder
@@ -66,6 +71,7 @@ class Client
         $this->features = new Features($this);
         $this->readings = new Api\Readings($this);
         $this->windvanger = new Api\Windvanger($this);
+        $this->usages = new Api\Usages($this);
 
         $this->setupHttpBuilder();
     }
